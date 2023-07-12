@@ -13,7 +13,7 @@ class user(models.Model):
     class Meta:
         db_table="user"
 class data(models.Model):
-    '''自定义user表对应的model'''
+    '''自定义data表对应的model'''
     data_id = models.CharField(primary_key=True,max_length=100)
     user_id = models.ForeignKey(user,on_delete=models.CASCADE)
     data_address = models.CharField(max_length=100)
